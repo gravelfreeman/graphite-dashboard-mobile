@@ -1,3 +1,4 @@
+![image](https://github.com/gravelfreeman/graphite-dashboard-mobile/assets/44218371/542db397-9837-4c53-8fc5-4463e6ab623a)
 
 ## 1. Header
 
