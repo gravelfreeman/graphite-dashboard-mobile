@@ -7,7 +7,10 @@ The goal of this mobile dashboard is to fix 2 things that I think are missing fr
 
 On all the pages I'm using [Mushroom Chips Card](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/chips.md) for showing various information. On the homepage I like to show the outdoor temperature, alarm system and opened lights. For the rooms I'm showing the room temperature, room humidity and opened lights.
 
-### 1.1.1 Chip card template for the homepage
+### 1.1 Homepage header
+
+#### 1.1.1 Chip card template for the homepage
+
 ```
 type: custom:mushroom-chips-card
 chips:
@@ -60,13 +63,15 @@ chips:
 alignment: center
 ```
 
-### 1.1.2 Helper Template to show total number of lights ON
+#### 1.1.2 Helper Template to show total number of lights ON
 `{{ states.light|selectattr("state", "equalto", "on")|list|length }}`
 _add this as an Helper Template_
 
 ![image](https://github.com/gravelfreeman/ha-mobile-dashboard/assets/44218371/a92fad82-7ee5-4d9c-ba0d-4c4c9211804d)
 
-### 1.2.1 Chip card template for individual room
+### 1.2 Individual rooms header
+
+#### 1.2.1 Chip card template for individual room
 
 ```
 type: custom:mushroom-chips-card
@@ -102,7 +107,7 @@ chips:
 alignment: center
 ```
 
-### 1.2.2 Helper Template to show total number of lights ON per room
+#### 1.2.2 Helper Template to show total number of lights ON per room
 ```
 {%- set search_state = 'on' %}
 {%- set search_area = 'ROOM_NAME' %}
@@ -114,15 +119,17 @@ alignment: center
 ```
 _add this as an Helper Template for each room_
 
+![image](https://github.com/gravelfreeman/ha-mobile-dashboard/assets/44218371/a08e106b-d926-4035-b875-f3462882b881)
+
 ## 2. Main Page
 
 The main page is dynamic which means that I'm only showing the widgets that are in an active state from the other rooms.
 
-I like to show a greeting using the Mushroom Title Card even though it's completely useless. It kinda help formatting the page and make it look like an official device. In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have Mealie and followed their HA instructions.
+I like to show a greeting using the [Mushroom Title](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/title.md). It kinda help formatting the page and make it look like an official device. In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have [Mealie HACS](https://github.com/mealie-recipes/mealie-hacs).
 
 ``Le souper de ce soir sera {{ states('sensor.mealie_todays_meal') }}.``
 
-Right under I like to show who's home or away with Mushroom Person Cards. You can achieve it with an horizontal stack and this code example
+Right under I like to show who's home or away with [Mushroom Person Cards](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/person.md). You can achieve it with an horizontal stack and this code example
 
 ```
 type: horizontal-stack
@@ -136,19 +143,37 @@ cards:
     icon_type: entity-picture
 ```
 
-![image](https://github.com/gravelfreeman/ha-mobile-dashboard/assets/44218371/a08e106b-d926-4035-b875-f3462882b881)
-
-### 2.1 Dynamic Cards
+## 2.1 Dynamic Cards
 
 A few examples would be if there's music playing, if there's laundry ongoing, etc. You can quickly set this up by copy pasting cards from your room and integrate them in a [Conditional Card](https://www.home-assistant.io/dashboards/conditional/). Set the condition so that it only appears if the state is active.
 
-### 2.2 Rooms
+Here's an example with Spotify that will only be showing when there's a song playing
+
+```
+type: conditional
+conditions:
+  - condition: state
+    entity: media_player.spotify
+    state: playing
+card:
+  type: media-control
+  entity: media_player.spotify
+  name: Spotify
+  tap_action: null
+  action: navigate
+  navigation_path: /lovelace/media
+```
+
+## 3. Rooms
 
 Here I'm using [UI-Lovelace-Minimalist room cards](https://ui-lovelace-minimalist.github.io/UI/usage/cards/card_room/) but without UI-Lovelace-Minimalist which I find it to be too much overhead and I like to keep my install as minimal as possible. You can find code here which you must add to your dashboard raw yaml configuration file. Those room cards are the only way to navigate the rooms in the dashboard which leave the dashboard menu to be used for other stuff. The card will show:
 
-- Up to 4 icons of your choice
-- Temperature / Humidity of the room
-- Name and room icon
+- Room name and icon
+- Up to 4 customizable icons (ex. climate, lights, appliance)
+- Room temperature and humidity
+- Customizable color
 
-I like to use the first icon for the climate control and the second icon for lights control. Basically those icons are a shortcut to avoid navigating in the room and control that room faster.
+I like to use the first icon for the climate control and the second icon for lights control. Basically those icons are a shortcut to avoid navigating in the room and control that room faster. I reserve the third and fourth icons in case that a room has an appliance I'd like to quickly access. Examples would be media center in living room, oven in kitchen, laundry appliances in bathroom, etc.
+
+### 3.1 
 
