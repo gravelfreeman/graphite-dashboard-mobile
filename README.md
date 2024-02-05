@@ -5,6 +5,8 @@ The goal of this mobile dashboard is to fix 2 things that I think are missing fr
 
 # Demo
 
+Coming soon...
+
 # Table of Content
 
 - [1. Home](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/home.md)
@@ -31,3 +33,33 @@ The goal of this mobile dashboard is to fix 2 things that I think are missing fr
   - [4.2 Playlist Selection](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/media.md#2-playlist-selection)
 - [5. Lights](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/lights.md)
 - [6. Energy]()
+
+# Requirements
+
+#### Theme
+
+- [graphite-theme](https://github.com/gravelfreeman/graphite-theme) - Works best using my custom theme
+
+#### Essential frontend components
+
+- [hass-swipe-navigation](https://github.com/zanna-37/hass-swipe-navigation) - Gives the ability to swipe using the touch screen
+- [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod) - Used to style the UI
+- [lovelace-mushroom](https://github.com/piitaya/lovelace-mushroom) - This project is based on Mushroom cards
+- [stack-in-card](https://github.com/custom-cards/stack-in-card) - Used to group elements in the UI like the lights
+
+#### Optional integrations
+
+- [alarmo](https://github.com/nielsfaber/alarmo) - Used for the security system
+- [frigate-hass-integration](https://github.com/blakeblackshear/frigate-hass-integration) - Used for the camera/NVR system
+- [scheduler-component](https://github.com/nielsfaber/scheduler-component) - Used for creating automations within a room page
+- [spotify](https://www.home-assistant.io/integrations/spotify/) - Essential if using Spotcast
+- [spotcast](https://github.com/fondberg/spotcast) - Connect your Spotify account
+
+#### Optional frontend components
+
+- [scheduler-card](https://github.com/nielsfaber/scheduler-card) - Used in conjunction with scheduler-component
+- [frigate-hass-card](https://github.com/dermotduffy/frigate-hass-card/releases) - Used in conjunction with Frigate
+- [spotify-card](https://github.com/custom-cards/spotify-card) - Used in conjunction with Spotcast
+- [mini-media-player](https://github.com/kalkih/mini-media-player) - Used to display the artwork and media controls
+
+# Extras
