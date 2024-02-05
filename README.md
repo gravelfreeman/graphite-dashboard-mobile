@@ -186,7 +186,7 @@ You must paste it before the data of your configuration file. It should be befor
 
 ### 3.2 Add a custom card-room in your dashboard
 
-The way it work is that you creating a custom template card for 2 rooms that'll be diplayed horizontally. Add as many as you want and they'll nicely work together without using a vertical stack card. Here's an example for 2 rooms.
+The way it work is that you creating a custom template card for 2 rooms that'll be diplayed horizontally. Add as many as you want and they'll nicely work together. Here's an example for 2 rooms.
 
 ```
 type: vertical-stack
