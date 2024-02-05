@@ -2,6 +2,15 @@
 
 On all the pages I'm using [Mushroom Chips Card](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/chips.md) for showing various information. On the homepage I like to show the outdoor temperature, alarm system and opened lights. For the rooms I'm showing the room temperature, room humidity and opened lights.
 
+General behaviour of buttons:
+
+- Light icon single tap = Navigate to the [Lights](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/lights.md) page
+- Light icon hold = Turn off all lights in the house
+- Alarm icon single tap = Open the alarm system quick access to arm and disarm
+- Alarm icon hold = Navigate to the [Security](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/security.md) page
+- Weather icon single tap = Navigate to your EXTERIOR room page
+- Temperature/Humidity icons = default behaviour which gives you in depth information
+
 ## 1. Homepage header
 
 ### 1.1 Chip card template for the homepage
