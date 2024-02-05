@@ -3,6 +3,12 @@ Sharing my custom dashboard since my friend asked for it. Since he offered me to
 
 The goal of this mobile dashboard is to fix 2 things that I think are missing from Home Assistant. First looking good. Second being actually practical. Home-Assistant is a very good tool but I think it's ugly and all over the place. This dashboard isn't ready all of the box. You'll still have the pleasure to setup and learn Home-Assistant to your liking. It's more like a way to organize your dashboard to achieve a clean look while keeping it practical.
 
+# Demo
+
+Coming soon...
+
+## Features
+
 The way this dashboard is intended to be used is a little bit different than the standard dashboard.
 
 - Homepage will be the starting point to quickly access everything
@@ -22,10 +28,6 @@ The way this dashboard is intended to be used is a little bit different than the
   - List and control all the lights in that room
   - Control your climate/thermostat in that room
   - Setup climate and lightning automations from the dashboard
-
-# Demo
-
-Coming soon...
 
 # Table of Content
 
