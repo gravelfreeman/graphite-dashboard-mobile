@@ -2,7 +2,7 @@
 
 The main page is dynamic which means that I'm only showing the widgets that are in an active state from the other rooms.
 
-
+![firefox_RTbQDg9J7z](https://github.com/gravelfreeman/graphite-dashboard-mobile/assets/44218371/8b80feaa-ff1d-4351-be7e-93094691a194)
 
 ## 1. Greetings
 
