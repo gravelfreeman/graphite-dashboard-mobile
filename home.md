@@ -6,7 +6,7 @@ The main page is dynamic which means that I'm only showing the widgets that are 
 
 ## 1. Greetings
 
-I like to show a greeting using the [Mushroom Title](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/title.md). It kinda help formatting the page and make it look like an official device. In the title I created a customized greeting sensor in order to keep the home page dynamic. See the code below to create your own! In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have [Mealie HACS](https://github.com/mealie-recipes/mealie-hacs).
+I like to show a greeting using the [Mushroom Title](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/title.md). It kinda help formatting the page and make it look like an official device. In the title I created a customized greeting sensor in order to keep the home page dynamic. Add the [greetings.yaml](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/greetings.yaml) file in your sensor folder. In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have [Mealie HACS](https://github.com/mealie-recipes/mealie-hacs).
 
 ```
 type: custom:mushroom-title-card
@@ -15,7 +15,7 @@ title_tap_action:
   action: none
 subtitle_tap_action:
   action: none
-subtitle: Le souper de ce soir sera {{ states('sensor.mealie_todays_meal') }}.
+subtitle: Tonight's meal will be {{ states('sensor.mealie_todays_meal') }}.
 ```
 
 ## 2. People
