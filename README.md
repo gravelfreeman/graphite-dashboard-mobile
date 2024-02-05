@@ -7,7 +7,7 @@ The goal of this mobile dashboard is to fix 2 things that I think are missing fr
 
 Coming soon...
 
-## Features
+# Features
 
 The way this dashboard is intended to be used is a little bit different than the standard dashboard.
 
