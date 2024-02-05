@@ -3,49 +3,6 @@ Sharing my custom dashboard since my friend asked for it. Since he offered me to
 
 The goal of this mobile dashboard is to fix 2 things that I think are missing from Home Assistant. First looking good. Second being actually practical. Home-Assistant is a very good tool but I think it's ugly and all over the place. This dashboard isn't ready all of the box. You'll still have the pleasure to setup and learn Home-Assistant to your liking. It's more like a way to organize your dashbaord to achieve a clean look while keeping it practical.
 
-## 2. Main Page
-
-The main page is dynamic which means that I'm only showing the widgets that are in an active state from the other rooms.
-
-I like to show a greeting using the [Mushroom Title](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/title.md). It kinda help formatting the page and make it look like an official device. In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have [Mealie HACS](https://github.com/mealie-recipes/mealie-hacs).
-
-``Le souper de ce soir sera {{ states('sensor.mealie_todays_meal') }}.``
-
-Right under I like to show who's home or away with [Mushroom Person Cards](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/person.md). You can achieve it with an horizontal stack and this code example
-
-```
-type: horizontal-stack
-cards:
-  - type: custom:mushroom-person-card
-    entity: person.REPLACEME
-    layout: horizontal
-    icon_type: entity-picture
-  - type: custom:mushroom-person-card
-    entity: person.REPLACEME
-    icon_type: entity-picture
-```
-
-## 2.1 Dynamic Cards
-
-A few examples would be if there's music playing, if there's laundry ongoing, etc. You can quickly set this up by copy pasting cards from your room and integrate them in a [Conditional Card](https://www.home-assistant.io/dashboards/conditional/). Set the condition so that it only appears if the state is active.
-
-Here's an example with Spotify that will only be showing when there's a song playing
-
-```
-type: conditional
-conditions:
-  - condition: state
-    entity: media_player.spotify
-    state: playing
-card:
-  type: media-control
-  entity: media_player.spotify
-  name: Spotify
-  tap_action: null
-  action: navigate
-  navigation_path: /lovelace/media
-```
-
 ## 3. Rooms
 
 Here I'm using [UI-Lovelace-Minimalist room cards](https://ui-lovelace-minimalist.github.io/UI/usage/cards/card_room/) but without UI-Lovelace-Minimalist which I find it to be too much overhead and I like to keep my install as minimal as possible. I'm using an [Horizontal Stack Card](https://www.home-assistant.io/dashboards/horizontal-stack/) in order to show 2 room card per row which I found to be the best for a mobile dashboard. Those room cards are the only way to navigate the rooms in the dashboard which leave the dashboard menu to be used for other stuff. The room card will display:
