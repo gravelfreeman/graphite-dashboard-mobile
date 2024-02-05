@@ -9,8 +9,6 @@ Coming soon...
 
 # Features
 
-The way this dashboard is intended to be used is a little bit different than the standard dashboard.
-
 - Homepage will be the starting point to quickly access everything
   - Swipe the screen with your finger to navigate the top menu
   - You're welcomed and told what's up for dinner tonight
