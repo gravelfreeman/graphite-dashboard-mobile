@@ -19,7 +19,7 @@ secondary_info: last-changed
 layout: horizontal
 ```
 
-## 3. Security System
+## 3. Camera NVR
 
 This will most likely depend on what your security camera setup is. Although I highly recommend Frigate NVR as it's well integrated in Home-Assistant and is FOSS. Since it's a mobile dashboard I've setup all my cameras in the widget which will show the latest camera that had detected movement. You can quickly scroll through your cameras by using your thumb and swiping left or right. Again just like Alarmo, I suggest that you look up all the options and set it up as you like.
 
