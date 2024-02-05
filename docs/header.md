@@ -4,12 +4,13 @@ On all the pages I'm using [Mushroom Chips Card](https://github.com/piitaya/love
 
 General behaviour of buttons:
 
-- Light icon single tap = Navigate to the [Lights](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/lights.md) page
-- Light icon hold = Turn off all lights in the house
-- Alarm icon single tap = Open the alarm system quick access to arm and disarm
-- Alarm icon hold = Navigate to the [Security](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/security.md) page
-- Weather icon single tap = Navigate to your EXTERIOR room page
-- Temperature/Humidity icons = default behaviour which gives you in depth information
+- 💡 Light icon single tap = Navigate to the [Lights](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/lights.md) page
+- 💡 Light icon hold = Turn off all lights in the house
+- 🛡️ Alarm icon single tap = Open the alarm system quick access to arm and disarm
+- 🛡️ Alarm icon hold = Navigate to the [Security](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/docs/security.md) page
+- ⛅ Weather icon single tap = Navigate to your EXTERIOR room page
+- 🌡️ Temperature icon = default behaviour which gives you in depth information
+- 💧 Humidity icon = default behaviour which gives you in depth information
 
 ## 1. Homepage header
 
