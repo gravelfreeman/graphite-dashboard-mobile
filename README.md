@@ -40,7 +40,7 @@ Coming soon...
 
 - [graphite-theme](https://github.com/gravelfreeman/graphite-theme) - Works best using my custom theme
 
-#### Essential frontend components
+#### Required frontend components
 
 - [hass-swipe-navigation](https://github.com/zanna-37/hass-swipe-navigation) - Gives the ability to swipe using the touch screen
 - [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod) - Used to style the UI
