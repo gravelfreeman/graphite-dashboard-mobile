@@ -58,7 +58,42 @@ cards:
 
 ## 3. Devices and appliances
 
+This is highly dependant on what your device is. For generic device I suggest you build something with the default Tile card or the [Mushroom Entity card](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/entity.md). If you're using my [graphite](https://github.com/gravelfreeman/graphite-theme) theme, I've updated all the default colors to match my light color scheme, so even the default Tile card will look great depsite the configuration options of the Mushroom card.
 
+Be creative and keep in mind that the whole thing is looking good because it's coesive, try to keep it to default or Mushroom cards and you should get good results.
+
+You decide but for something simple like my laundry the tile card was just right.
+
+![image](https://github.com/gravelfreeman/graphite-dashboard-mobile/assets/44218371/a64880dd-c340-4b70-9013-694f6e96e6d1)
+
+```
+type: horizontal-stack
+cards:
+  - type: tile
+    entity: sensor.WASHER_REMANING_TIME
+    vertical: false
+    show_entity_picture: false
+    hide_state: false
+    icon: mdi:washing-machine
+    color: light-blue
+    tap_action:
+      action: none
+    icon_tap_action:
+      action: none
+    name: Washing Machine
+  - type: tile
+    entity: sensor.DRYER_REMAINING_TIME
+    vertical: false
+    show_entity_picture: false
+    hide_state: false
+    icon: mdi:tumble-dryer
+    color: lime
+    tap_action:
+      action: none
+    icon_tap_action:
+      action: none
+    name: Dryer
+```
 
 ## 4. Climate
 
