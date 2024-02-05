@@ -1,0 +1,13 @@
+- platform: template
+  sensors:
+    greetings:
+      friendly_name: Greetings
+      value_template: >
+        {% set day = now().strftime('%A') %}
+        {%- if as_timestamp(now()) | timestamp_custom('%H') | int < 12 -%}
+        {{ ["Bon matin", "Guten Morgen", "Buena mañana", "Buon pomeriggio", "Bonjou", "여기요"] | random }}
+        {%- elif as_timestamp(now()) | timestamp_custom('%H') | int < 18 -%}
+        {{ ["Bonne journée", "Buongiorno", "Buenos dias", "Bon apremidi", "Guten Tag", "안녕"] | random }}
+        {%- else -%}
+        {{ ["Bonsoir", "Buonasera", "Guten Abend", "Bonswa", "Buenas noches", "봉수아르"] | random }}
+        {%- endif -%}
