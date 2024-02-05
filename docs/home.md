@@ -6,7 +6,7 @@ The main page is dynamic which means that I'm only showing the widgets that are 
 
 ## 1. Greetings
 
-I like to show a greeting using the [Mushroom Title](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/title.md). It kinda help formatting the page and make it look like an official device. In the title I created a customized greeting sensor in order to keep the home page dynamic. Add the [greetings.yaml](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/greetings.yaml) file in your sensor folder. In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have [Mealie HACS](https://github.com/mealie-recipes/mealie-hacs).
+I like to show a greeting using the [Mushroom Title](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/title.md). It kinda help formatting the page and make it look like an official device. In the title I created a customized greeting sensor in order to keep the home page dynamic. Add the [greetings.yaml](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/templates/greetings.yaml) file in your sensor folder. In the subtitle of that card I'm declaring what's up for dinner tonight. You can add this code in the subtitle to do the same if you have [Mealie HACS](https://github.com/mealie-recipes/mealie-hacs).
 
 ```
 type: custom:mushroom-title-card
@@ -68,7 +68,7 @@ I like to use the first icon for the climate control and the second icon for lig
 
 ### 4.1 Add the card-room template
 
-In order to be able to use the room cards in your dashboard you'll have to edit your dashboard in the Raw Configuration Editor. Copy the code from [room-card.yaml](https://github.com/gravelfreeman/ha-mobile-dashboard/blob/main/rooms.yaml
+In order to be able to use the room cards in your dashboard you'll have to edit your dashboard in the Raw Configuration Editor. Copy the code from [room-card.yaml](https://github.com/gravelfreeman/graphite-dashboard-mobile/blob/main/templates/card_room.yaml
 ) into your dashboard raw yaml configuration file.
 
 You must paste it before the data of your configuration file. It should be before your first page and exactly before:
