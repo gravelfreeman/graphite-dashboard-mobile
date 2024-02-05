@@ -1,10 +1,10 @@
-## 1. Header
+# Header
 
 On all the pages I'm using [Mushroom Chips Card](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/chips.md) for showing various information. On the homepage I like to show the outdoor temperature, alarm system and opened lights. For the rooms I'm showing the room temperature, room humidity and opened lights.
 
-### 1.1 Homepage header
+## 1. Homepage header
 
-#### 1.1.1 Chip card template for the homepage
+### 1.1 Chip card template for the homepage
 
 ```
 type: custom:mushroom-chips-card
@@ -58,15 +58,15 @@ chips:
 alignment: center
 ```
 
-#### 1.1.2 Helper Template to show total number of lights ON
+### 1.2 Helper Template to show total number of lights ON
 `{{ states.light|selectattr("state", "equalto", "on")|list|length }}`
 _add this as an Helper Template_
 
 ![image](https://github.com/gravelfreeman/ha-mobile-dashboard/assets/44218371/a92fad82-7ee5-4d9c-ba0d-4c4c9211804d)
 
-### 1.2 Individual rooms header
+## 2. Individual rooms header
 
-#### 1.2.1 Chip card template for individual room
+### 2.1 Chip card template for individual room
 
 ```
 type: custom:mushroom-chips-card
@@ -102,7 +102,7 @@ chips:
 alignment: center
 ```
 
-#### 1.2.2 Helper Template to show total number of lights ON per room
+### 2.2 Helper Template to show total number of lights ON per room
 ```
 {%- set search_state = 'on' %}
 {%- set search_area = 'ROOM_NAME' %}
