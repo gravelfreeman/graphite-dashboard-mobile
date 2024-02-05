@@ -8,7 +8,7 @@ Using an Horizontal Stack you can add 3 lights per row. Here's a template for it
 
 ```
 type: horizontal-stack
-title: Bureau
+title: ROOM_NAME
 cards:
   - type: custom:mushroom-light-card
     entity: light.NAME
