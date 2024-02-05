@@ -1,7 +1,27 @@
 # graphite-dashboard-mobile
 Sharing my custom dashboard since my friend asked for it. Since he offered me to help with the code I thought it would make sense to host it on my Github. Might as well share it publicly so that more people can help.
 
-The goal of this mobile dashboard is to fix 2 things that I think are missing from Home Assistant. First looking good. Second being actually practical. Home-Assistant is a very good tool but I think it's ugly and all over the place. This dashboard isn't ready all of the box. You'll still have the pleasure to setup and learn Home-Assistant to your liking. It's more like a way to organize your dashbaord to achieve a clean look while keeping it practical.
+The goal of this mobile dashboard is to fix 2 things that I think are missing from Home Assistant. First looking good. Second being actually practical. Home-Assistant is a very good tool but I think it's ugly and all over the place. This dashboard isn't ready all of the box. You'll still have the pleasure to setup and learn Home-Assistant to your liking. It's more like a way to organize your dashboard to achieve a clean look while keeping it practical.
+
+The way this dashboard is intended to be used is a little bit different than the standard dashboard.
+
+- Homepage will be the starting point to quickly access everything
+  - Swipe the screen with your finger to navigate the top menu
+  - You're welcomed and told what's up for dinner tonight
+  - Quickly shows who's home or away
+  - Dynamic widgets that only appears when active
+  - Every rooms with quick access icons to control climate, lights and devices without leaving the homepage
+- Each page have an header that serves as a quick access to important stuff
+- Navigation menu is used for a clean and quick access to general home automation
+  - Security system integrates Alarmo, Frigate and shows all your sensors
+  - Media center shows full artwork, media controls and list your playlists that can be triggered
+  - Lights will show all your lights and let you control them
+  - Energy will send you to the energy dashboard without using the hamburger menu
+- Clicking on a room gives more control to that room
+  - List and control all the devices in that room
+  - List and control all the lights in that room
+  - Control your climate/thermostat in that room
+  - Setup climate and lightning automations from the dashboard
 
 # Demo
 
